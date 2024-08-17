@@ -48,11 +48,13 @@ struct TaskListView: View {
             .navigationBarTitle("Tasks")
             .navigationBarItems(trailing: Button(action: {
                 isAddingTask = true
+                triggerHapticFeedback()
             }) {
                 Image(systemName: "plus")
             })
             .navigationBarItems(leading: Button(action: {
                 isShowingDashboard = true
+                triggerHapticFeedback()
             }) {
                 Text("Dashboard")
             })
@@ -66,6 +68,10 @@ struct TaskListView: View {
                 TaskDetailView(viewModel: TaskDetailViewModel(task: task, taskListViewModel: viewModel))
             }
         }
+    }
+    private func triggerHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 }
 
