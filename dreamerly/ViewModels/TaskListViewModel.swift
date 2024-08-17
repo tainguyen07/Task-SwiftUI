@@ -35,4 +35,21 @@ class TaskListViewModel: ObservableObject {
         taskService.deleteTask(task)
         loadTasks()
     }
+    
+    var completedTasksCount: Int {
+        tasks.filter { $0.isCompleted }.count
+    }
+    
+    var pendingTasksCount: Int {
+        tasks.filter { !$0.isCompleted }.count
+    }
+    
+    var totalTasksCount: Int {
+        tasks.count
+    }
+    
+    var completionPercentage: Double {
+        guard totalTasksCount > 0 else { return 0 }
+        return Double(completedTasksCount) / Double(totalTasksCount)
+    }
 }

@@ -10,7 +10,8 @@ import SwiftUI
 struct TaskListView: View {
     @StateObject private var viewModel = TaskListViewModel()
     @State private var isAddingTask = false
-    
+    @State private var isShowingDashboard = false
+
     var body: some View {
         NavigationStack {
             List {
@@ -50,6 +51,14 @@ struct TaskListView: View {
             }) {
                 Image(systemName: "plus")
             })
+            .navigationBarItems(leading: Button(action: {
+                isShowingDashboard = true
+            }) {
+                Text("Dashboard")
+            })
+            .navigationDestination(isPresented: $isShowingDashboard) {
+                DashboardView(viewModel: viewModel)
+            }
             .navigationDestination(isPresented: $isAddingTask) {
                 AddEditTaskView(viewModel: AddEditTaskViewModel(), taskListViewModel: viewModel)
             }
