@@ -14,7 +14,6 @@
 		22FBCCE02C6E2D9C00BCD81B /* AddEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */; };
 		22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */; };
 		22FBCCE52C6E2EB500BCD81B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE42C6E2EB500BCD81B /* Task.swift */; };
-		22FBCCE72C6EEEDB00BCD81B /* SubTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE62C6EEEDB00BCD81B /* SubTask.swift */; };
 		22FBCCEA2C6EEF1F00BCD81B /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE92C6EEF1F00BCD81B /* TaskService.swift */; };
 		22FBCCEC2C6EEF2A00BCD81B /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCEB2C6EEF2A00BCD81B /* PersistenceService.swift */; };
 		22FBCCEE2C6EEF3B00BCD81B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCED2C6EEF3B00BCD81B /* NotificationService.swift */; };
@@ -36,7 +35,6 @@
 		22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskView.swift; sourceTree = "<group>"; };
 		22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		22FBCCE42C6E2EB500BCD81B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		22FBCCE62C6EEEDB00BCD81B /* SubTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTask.swift; sourceTree = "<group>"; };
 		22FBCCE92C6EEF1F00BCD81B /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		22FBCCEB2C6EEF2A00BCD81B /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		22FBCCED2C6EEF3B00BCD81B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				22FBCCE42C6E2EB500BCD81B /* Task.swift */,
-				22FBCCE62C6EEEDB00BCD81B /* SubTask.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,7 +217,6 @@
 				22FBCCFC2C6EF0AE00BCD81B /* CalendarView.swift in Sources */,
 				22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */,
 				22FBCCF82C6EEFAA00BCD81B /* TaskListView.swift in Sources */,
-				22FBCCE72C6EEEDB00BCD81B /* SubTask.swift in Sources */,
 				22A2B16B2C6DDCF400DFF1EA /* dreamerlyApp.swift in Sources */,
 				22FBCCE52C6E2EB500BCD81B /* Task.swift in Sources */,
 				22FBCCFA2C6EF09900BCD81B /* TaskRowView.swift in Sources */,

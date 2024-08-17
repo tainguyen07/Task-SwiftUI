@@ -26,7 +26,6 @@ struct Task: Identifiable, Codable, Hashable {
     var priority: TaskPriority
     var category: TaskCategory
     var isCompleted: Bool = false
-    var subtasks: [Subtask] = []
     
     static func == (lhs: Task, rhs: Task) -> Bool {
         return lhs.id == rhs.id

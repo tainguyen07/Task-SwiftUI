@@ -16,13 +16,6 @@ class TaskDetailViewModel: ObservableObject {
         self.taskListViewModel = taskListViewModel
     }
     
-    func toggleSubtaskCompletion(_ subtask: Subtask) {
-        if let index = task.subtasks.firstIndex(where: { $0.id == subtask.id }) {
-            task.subtasks[index].isCompleted.toggle()
-        }
-        saveTask()
-    }
-    
     func saveTask() {
         taskListViewModel.updateTask(task)
     }
