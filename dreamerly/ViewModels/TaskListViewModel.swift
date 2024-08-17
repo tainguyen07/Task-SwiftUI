@@ -26,6 +26,11 @@ class TaskListViewModel: ObservableObject {
         loadTasks()
     }
     
+    func updateTask(_ task: Task) {
+        taskService.saveTask(task)
+        loadTasks()
+    }
+    
     func deleteTask(_ task: Task) {
         taskService.deleteTask(task)
         loadTasks()
