@@ -22,6 +22,7 @@ class TaskService {
             tasks.append(task)
         }
         persistenceService.saveTasks(tasks)
+        NotificationService.scheduleReminderNotification(for: task)
     }
     
     func deleteTask(_ task: Task) {
