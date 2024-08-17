@@ -52,6 +52,7 @@ struct TaskDetailView: View {
                 Button("Save") {
                     viewModel.saveTask()
                     isModified = false
+                    presentationMode.wrappedValue.dismiss() // Ensure the view dismisses after saving
                 }
                 .disabled(!isModified)
                 
