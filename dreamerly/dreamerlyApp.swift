@@ -9,14 +9,20 @@ import SwiftUI
 
 @main
 struct dreamerlyApp: App {
+    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    
     init() {
         requestNotificationPermissions()
     }
     
     var body: some Scene {
         WindowGroup {
-            let coordinator = AppCoordinator()
-            coordinator.start()
+            if hasCompletedOnboarding {
+                let coordinator = AppCoordinator()
+                coordinator.start()
+            } else {
+                OnboardingView()
+            }
         }
     }
     

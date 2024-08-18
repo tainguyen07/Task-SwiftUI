@@ -11,6 +11,8 @@
 		22A2B16F2C6DDCF500DFF1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A2B16E2C6DDCF500DFF1EA /* Assets.xcassets */; };
 		22A2B1722C6DDCF500DFF1EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A2B1712C6DDCF500DFF1EA /* Preview Assets.xcassets */; };
 		22E80E702C711D28000D918F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E6F2C711D28000D918F /* DashboardView.swift */; };
+		22E80E742C718A1B000D918F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E732C718A1B000D918F /* OnboardingScreenView.swift */; };
+		22E80E762C718A49000D918F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E752C718A49000D918F /* OnboardingView.swift */; };
 		22FBCCDE2C6E2D7200BCD81B /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */; };
 		22FBCCE02C6E2D9C00BCD81B /* AddEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */; };
 		22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */; };
@@ -33,6 +35,8 @@
 		22A2B16E2C6DDCF500DFF1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22A2B1712C6DDCF500DFF1EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22E80E6F2C711D28000D918F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		22E80E732C718A1B000D918F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		22E80E752C718A49000D918F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskView.swift; sourceTree = "<group>"; };
 		22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		22E80E772C718CBB000D918F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				22E80E732C718A1B000D918F /* OnboardingScreenView.swift */,
+				22E80E752C718A49000D918F /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		22FBCCE32C6E2EA300BCD81B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 			children = (
 				22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */,
 				22FBCCF72C6EEFAA00BCD81B /* TaskListView.swift */,
+				22E80E772C718CBB000D918F /* Onboarding */,
 				22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */,
 				22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */,
 				22FBCCF92C6EF09900BCD81B /* TaskRowView.swift */,
@@ -214,10 +228,12 @@
 				22FBCCEA2C6EEF1F00BCD81B /* TaskService.swift in Sources */,
 				22E80E702C711D28000D918F /* DashboardView.swift in Sources */,
 				22FBCCF12C6EEF5E00BCD81B /* TaskListViewModel.swift in Sources */,
+				22E80E762C718A49000D918F /* OnboardingView.swift in Sources */,
 				22FBCCF32C6EEF7700BCD81B /* TaskDetailViewModel.swift in Sources */,
 				22FBCCDE2C6E2D7200BCD81B /* TaskDetailView.swift in Sources */,
 				22FBCCFE2C6EF12000BCD81B /* AppCoordinator.swift in Sources */,
 				22FBCCF52C6EEF8A00BCD81B /* AddEditTaskViewModel.swift in Sources */,
+				22E80E742C718A1B000D918F /* OnboardingScreenView.swift in Sources */,
 				22FBCCFC2C6EF0AE00BCD81B /* CalendarView.swift in Sources */,
 				22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */,
 				22FBCCF82C6EEFAA00BCD81B /* TaskListView.swift in Sources */,
