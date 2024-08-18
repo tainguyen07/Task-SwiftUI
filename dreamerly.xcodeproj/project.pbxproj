@@ -143,9 +143,9 @@
 		22FBCCF62C6EEF9C00BCD81B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22E80E772C718CBB000D918F /* Onboarding */,
 				22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */,
 				22FBCCF72C6EEFAA00BCD81B /* TaskListView.swift */,
-				22E80E772C718CBB000D918F /* Onboarding */,
 				22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */,
 				22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */,
 				22FBCCF92C6EF09900BCD81B /* TaskRowView.swift */,
