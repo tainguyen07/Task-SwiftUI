@@ -25,6 +25,10 @@ class TaskService {
         NotificationService.scheduleReminderNotification(for: task)
     }
     
+    func saveTasks(_ tasks: [Task]) {
+        persistenceService.saveTasks(tasks)
+    }
+    
     func deleteTask(_ task: Task) {
         var tasks = loadTasks()
         tasks.removeAll { $0.id == task.id }

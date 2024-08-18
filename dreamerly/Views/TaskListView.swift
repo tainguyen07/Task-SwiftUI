@@ -11,16 +11,19 @@ struct TaskListView: View {
     @StateObject private var viewModel = TaskListViewModel()
     @State private var isAddingTask = false
     @State private var isShowingDashboard = false
-
+    
     var body: some View {
         NavigationStack {
             List {
-                // Section for incomplete tasks
+                // Section for incomplete tasks with drag-and-drop functionality
                 Section(header: Text("Incomplete Tasks")) {
                     ForEach(viewModel.tasks.filter { !$0.isCompleted }) { task in
                         NavigationLink(value: task) {
                             TaskRowView(task: task)
                         }
+                    }
+                    .onMove { indices, newOffset in
+                        viewModel.moveTask(from: indices, to: newOffset)
                     }
                     .onDelete { indexSet in
                         indexSet.forEach { index in
@@ -30,12 +33,15 @@ struct TaskListView: View {
                     }
                 }
                 
-                // Section for completed tasks
+                // Section for completed tasks with drag-and-drop functionality
                 Section(header: Text("Completed Tasks")) {
                     ForEach(viewModel.tasks.filter { $0.isCompleted }) { task in
                         NavigationLink(value: task) {
                             TaskRowView(task: task)
                         }
+                    }
+                    .onMove { indices, newOffset in
+                        viewModel.moveTask(from: indices, to: newOffset)
                     }
                     .onDelete { indexSet in
                         indexSet.forEach { index in

@@ -52,4 +52,10 @@ class TaskListViewModel: ObservableObject {
         guard totalTasksCount > 0 else { return 0 }
         return Double(completedTasksCount) / Double(totalTasksCount)
     }
+    
+    // Function to move tasks within the list
+    func moveTask(from source: IndexSet, to destination: Int) {
+        tasks.move(fromOffsets: source, toOffset: destination)
+        taskService.saveTasks(tasks) // Save the reordered tasks
+    }
 }
