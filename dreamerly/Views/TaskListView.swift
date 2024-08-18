@@ -18,8 +18,8 @@ struct TaskListView: View {
                 // Section for incomplete tasks with drag-and-drop functionality
                 Section(header: Text("Incomplete Tasks")) {
                     ForEach(viewModel.tasks.filter { !$0.isCompleted }) { task in
-                        NavigationLink(value: task) {
-                            TaskRowView(task: task)
+                        NavigationLink(destination: TaskDetailView(viewModel: TaskDetailViewModel(task: task, taskListViewModel: viewModel))) {
+                            TaskRowView(task: task, onToggleComplete: toggleComplete, showButton: false)
                         }
                     }
                     .onMove { indices, newOffset in
@@ -36,8 +36,8 @@ struct TaskListView: View {
                 // Section for completed tasks with drag-and-drop functionality
                 Section(header: Text("Completed Tasks")) {
                     ForEach(viewModel.tasks.filter { $0.isCompleted }) { task in
-                        NavigationLink(value: task) {
-                            TaskRowView(task: task)
+                        NavigationLink(destination: TaskDetailView(viewModel: TaskDetailViewModel(task: task, taskListViewModel: viewModel))) {
+                            TaskRowView(task: task, onToggleComplete: toggleComplete, showButton: false)
                         }
                     }
                     .onMove { indices, newOffset in
@@ -75,6 +75,12 @@ struct TaskListView: View {
             }
         }
     }
+    
+    private func toggleComplete(task: Task) {
+            var updatedTask = task
+            updatedTask.isCompleted.toggle()
+            viewModel.updateTask(updatedTask)
+        }
     
 }
 

@@ -11,11 +11,14 @@ struct TaskDetailView: View {
     @ObservedObject var viewModel: TaskDetailViewModel
     @Environment(\.presentationMode) var presentationMode
     @State private var isModified = false
-
+    @State private var newSubtaskTitle: String = ""
+    @State private var isSubtasksExpanded: Bool = true // State to track expansion/collapse
+    
     var body: some View {
         Form {
             Section(header: Text("Details")) {
                 TextField("Title", text: $viewModel.task.title)
+                    .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                     .onChange(of: viewModel.task.title) { _ in
                         isModified = true
                     }
@@ -60,6 +63,34 @@ struct TaskDetailView: View {
                     isModified = true
                 }
             }
+            Section(header: subtaskSectionHeader()) {
+                if isSubtasksExpanded {
+                    ForEach(viewModel.task.subtasks) { subtask in
+                        HStack {
+                            Button(action: {
+                                viewModel.toggleSubtaskCompletion(subtask)
+                            }) {
+                                Image(systemName: subtask.isCompleted ? "checkmark.circle.fill" : "circle")
+                                    .foregroundColor(subtask.isCompleted ? .green : .gray)
+                            }
+                            
+                            Text(subtask.title)
+                                .strikethrough(subtask.isCompleted)
+                        }
+                    }
+                    
+                    HStack {
+                        TextField("New Subtask", text: $newSubtaskTitle)
+                        Button(action: {
+                            viewModel.addSubtask(title: newSubtaskTitle)
+                            newSubtaskTitle = ""
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+            }
         }
         .navigationBarTitle("Task Details")
         .navigationBarItems(
@@ -83,6 +114,21 @@ struct TaskDetailView: View {
                 }
             }
         )
+    }
+    
+    private func subtaskSectionHeader() -> some View {
+        HStack {
+            Text("Subtasks")
+            Spacer()
+            Button(action: {
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.7, blendDuration: 0.3)) {
+                    isSubtasksExpanded.toggle()
+                }
+            }) {
+                Image(systemName: isSubtasksExpanded ? "chevron.down" : "chevron.right")
+                    .foregroundColor(.gray)
+            }
+        }
     }
     
     // Provide a default binding for the DatePicker

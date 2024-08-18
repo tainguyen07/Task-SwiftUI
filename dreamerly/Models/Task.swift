@@ -27,7 +27,8 @@ struct Task: Identifiable, Codable, Hashable {
     var category: TaskCategory
     var isCompleted: Bool = false
     var reminderDate: Date? = nil // Optional reminder date
-    
+    var subtasks: [Subtask] = [] // Add an array of subtasks
+
     static func == (lhs: Task, rhs: Task) -> Bool {
         return lhs.id == rhs.id
     }

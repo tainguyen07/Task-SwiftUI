@@ -58,4 +58,14 @@ class TaskListViewModel: ObservableObject {
         tasks.move(fromOffsets: source, toOffset: destination)
         taskService.saveTasks(tasks) // Save the reordered tasks
     }
+    
+    func addSubtask(to task: Task, title: String) {
+        if let index = tasks.firstIndex(where: { $0.id == task.id }) {
+            var task = tasks[index]
+            let newSubtask = Subtask(title: title, isCompleted: false)
+            task.subtasks.append(newSubtask)
+            tasks[index] = task
+            taskService.saveTask(task)
+        }
+    }
 }

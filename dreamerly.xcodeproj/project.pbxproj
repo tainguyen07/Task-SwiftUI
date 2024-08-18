@@ -14,6 +14,7 @@
 		22E80E742C718A1B000D918F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E732C718A1B000D918F /* OnboardingScreenView.swift */; };
 		22E80E762C718A49000D918F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E752C718A49000D918F /* OnboardingView.swift */; };
 		22E80E7B2C71D828000D918F /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E7A2C71D828000D918F /* HapticFeedback.swift */; };
+		22E80E7F2C71E8B7000D918F /* SubTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E7E2C71E8B7000D918F /* SubTask.swift */; };
 		22FBCCDE2C6E2D7200BCD81B /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */; };
 		22FBCCE02C6E2D9C00BCD81B /* AddEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */; };
 		22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */; };
@@ -39,6 +40,7 @@
 		22E80E732C718A1B000D918F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		22E80E752C718A49000D918F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		22E80E7A2C71D828000D918F /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		22E80E7E2C71E8B7000D918F /* SubTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTask.swift; sourceTree = "<group>"; };
 		22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskView.swift; sourceTree = "<group>"; };
 		22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				22FBCCE42C6E2EB500BCD81B /* Task.swift */,
+				22E80E7E2C71E8B7000D918F /* SubTask.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				22FBCCFC2C6EF0AE00BCD81B /* CalendarView.swift in Sources */,
 				22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */,
 				22FBCCF82C6EEFAA00BCD81B /* TaskListView.swift in Sources */,
+				22E80E7F2C71E8B7000D918F /* SubTask.swift in Sources */,
 				22A2B16B2C6DDCF400DFF1EA /* dreamerlyApp.swift in Sources */,
 				22FBCCE52C6E2EB500BCD81B /* Task.swift in Sources */,
 				22FBCCFA2C6EF09900BCD81B /* TaskRowView.swift in Sources */,
