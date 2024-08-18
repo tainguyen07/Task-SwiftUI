@@ -10,11 +10,19 @@ import SwiftUI
 struct AddEditTaskView: View {
     @ObservedObject var viewModel: AddEditTaskViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State private var errorMessage: String? = nil  // State to track error messages
     var taskListViewModel: TaskListViewModel
-
+    
     var body: some View {
         Form {
             TextField("Title", text: $viewModel.task.title)
+                .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+            
+            if let errorMessage = errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .font(.footnote)
+            }
             
             DatePicker("Due Date", selection: $viewModel.task.dueDate, displayedComponents: .date)
             
@@ -32,10 +40,14 @@ struct AddEditTaskView: View {
         }
         .navigationBarTitle("Add/Edit Task")
         .navigationBarItems(trailing: Button("Save") {
-            HapticFeedback.triggerHapticFeedback()
-            viewModel.saveTask()
-            taskListViewModel.loadTasks() // Refresh the task list in TaskListViewModel
-            presentationMode.wrappedValue.dismiss()
+            if viewModel.task.title.isEmpty {
+                errorMessage = "Task title cannot be empty."
+            } else {
+                HapticFeedback.triggerHapticFeedback()
+                viewModel.saveTask()
+                taskListViewModel.loadTasks() // Refresh the task list in TaskListViewModel
+                presentationMode.wrappedValue.dismiss()
+            }
         })
     }
 }

@@ -13,7 +13,8 @@ struct TaskDetailView: View {
     @State private var isModified = false
     @State private var newSubtaskTitle: String = ""
     @State private var isSubtasksExpanded: Bool = true // State to track expansion/collapse
-    
+    @State private var errorMessage: String? = nil  // State to track error messages
+
     var body: some View {
         Form {
             Section(header: Text("Details")) {
@@ -82,12 +83,23 @@ struct TaskDetailView: View {
                     HStack {
                         TextField("New Subtask", text: $newSubtaskTitle)
                         Button(action: {
-                            viewModel.addSubtask(title: newSubtaskTitle)
-                            newSubtaskTitle = ""
+                            if newSubtaskTitle.isEmpty {
+                                errorMessage = "Subtask title cannot be empty."
+                            } else {
+                                viewModel.addSubtask(title: newSubtaskTitle)
+                                newSubtaskTitle = ""
+                                errorMessage = nil
+                            }
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.blue)
                         }
+                    }
+                    
+                    if let errorMessage = errorMessage {
+                        Text(errorMessage)
+                            .foregroundColor(.red)
+                            .font(.footnote)
                     }
                 }
             }
