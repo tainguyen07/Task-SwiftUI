@@ -65,6 +65,7 @@ struct TaskDetailView: View {
         .navigationBarItems(
             trailing: HStack {
                 Button("Save") {
+                    HapticFeedback.triggerHapticFeedback()
                     viewModel.saveTask()
                     isModified = false
                     presentationMode.wrappedValue.dismiss() // Ensure the view dismisses after saving
@@ -72,6 +73,7 @@ struct TaskDetailView: View {
                 .disabled(!isModified)
                 
                 Button(viewModel.task.isCompleted ? "Uncomplete Task" : "Complete Task") {
+                    HapticFeedback.triggerHapticFeedback()
                     if viewModel.task.isCompleted {
                         viewModel.unmarkTaskAsCompleted()
                     } else {

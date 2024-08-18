@@ -13,6 +13,7 @@
 		22E80E702C711D28000D918F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E6F2C711D28000D918F /* DashboardView.swift */; };
 		22E80E742C718A1B000D918F /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E732C718A1B000D918F /* OnboardingScreenView.swift */; };
 		22E80E762C718A49000D918F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E752C718A49000D918F /* OnboardingView.swift */; };
+		22E80E7B2C71D828000D918F /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E80E7A2C71D828000D918F /* HapticFeedback.swift */; };
 		22FBCCDE2C6E2D7200BCD81B /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */; };
 		22FBCCE02C6E2D9C00BCD81B /* AddEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */; };
 		22FBCCE22C6E2DB900BCD81B /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */; };
@@ -37,6 +38,7 @@
 		22E80E6F2C711D28000D918F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		22E80E732C718A1B000D918F /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		22E80E752C718A49000D918F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		22E80E7A2C71D828000D918F /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		22FBCCDD2C6E2D7200BCD81B /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		22FBCCDF2C6E2D9C00BCD81B /* AddEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskView.swift; sourceTree = "<group>"; };
 		22FBCCE12C6E2DB900BCD81B /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				22FBCCE92C6EEF1F00BCD81B /* TaskService.swift */,
 				22FBCCEB2C6EEF2A00BCD81B /* PersistenceService.swift */,
 				22FBCCED2C6EEF3B00BCD81B /* NotificationService.swift */,
+				22E80E7A2C71D828000D918F /* HapticFeedback.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FBCCEA2C6EEF1F00BCD81B /* TaskService.swift in Sources */,
+				22E80E7B2C71D828000D918F /* HapticFeedback.swift in Sources */,
 				22E80E702C711D28000D918F /* DashboardView.swift in Sources */,
 				22FBCCF12C6EEF5E00BCD81B /* TaskListViewModel.swift in Sources */,
 				22E80E762C718A49000D918F /* OnboardingView.swift in Sources */,

@@ -32,6 +32,7 @@ struct AddEditTaskView: View {
         }
         .navigationBarTitle("Add/Edit Task")
         .navigationBarItems(trailing: Button("Save") {
+            HapticFeedback.triggerHapticFeedback()
             viewModel.saveTask()
             taskListViewModel.loadTasks() // Refresh the task list in TaskListViewModel
             presentationMode.wrappedValue.dismiss()
